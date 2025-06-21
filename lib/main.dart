@@ -47,14 +47,20 @@ class _RadioPlayerPageState extends State<RadioPlayerPage> {
 
   Future<void> _initAudio() async {
     try {
-      await player.setAudioSource(AudioSource.uri(Uri.parse(streamUrl),
-        tag: MediaItem(
-          id: streamUrl,
-          title: "ALRC Radio Business",
-          artist: "ALRC Groupe Média",
-          artUri: Uri.parse('asset:assets/images/logo_radio.png'), // ✅ Logo dans notif
+      await player.setAudioSource(
+      LoopingAudioSource(
+        count: 9999, // simulation de boucle infinie
+        child: AudioSource.asset(
+          'assets/audio/presentaion1.mp3',
+          tag: MediaItem(
+            id: 'presentaion1',
+            title: 'ALRC Radio Business ',
+            artist: 'ALRC Groupe Média',
+            artUri: Uri.parse('asset:assets/images/logo_radio.png'),
+          ),
         ),
-      ));
+      ),
+    );
     } catch (e) {
       print("Erreur lors du chargement du flux audio: $e");
     }
