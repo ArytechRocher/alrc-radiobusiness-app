@@ -1,7 +1,7 @@
 
 workflows:
   android-build:
-    name: ALRC Radio Business CI
+    name: ALRC Radio Business
     environment:
       flutter: stable
     scripts:

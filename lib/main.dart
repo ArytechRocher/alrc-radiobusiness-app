@@ -37,7 +37,7 @@ class _RadioPlayerPageState extends State<RadioPlayerPage> {
   bool isPlaying = false;
 
   // 🔊 Remplace par ton vrai flux radio ici :
-  final String streamUrl = 'https://stream.alrc.groupe-media.biz/live.mp3';
+  final String streamUrl = 'asset:assets/images/logo_radio.png';
 
   @override
   void initState() {
@@ -52,7 +52,7 @@ class _RadioPlayerPageState extends State<RadioPlayerPage> {
           id: streamUrl,
           title: "ALRC Radio Business",
           artist: "ALRC Groupe Média",
-          artUri: Uri.parse('https://groupe-alrc.org/logo.png'), // ✅ Logo dans notif
+          artUri: Uri.parse('asset:assets/images/logo_radio.png'), // ✅ Logo dans notif
         ),
       ));
     } catch (e) {
