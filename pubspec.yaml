@@ -38,9 +38,12 @@ dependencies:
   just_audio: ^0.10.4
   audio_service: ^0.18.12
   just_audio_background: ^0.0.1-beta.10
-  provider: ^6.0.5
+  provider: ^6.1.2
   audio_session: ^0.1.16
   flutter_launcher_icons: ^0.14.4
+  animations: ^2.0.11
+  flutter_svg: ^2.0.9
+
    
 dev_dependencies:
   flutter_test:
