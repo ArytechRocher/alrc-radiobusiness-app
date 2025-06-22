@@ -4,8 +4,26 @@ workflows:
     name: ALRC Radio Business
     environment:
       flutter: stable
+      vars:
+          JAVA_TOOL_OPTIONS: "-Xmx4096m"
+      ndk: 27.0.12077973
     scripts:
       - flutter pub get
       - flutter build apk --debug
+      - name: Set NDK version
+        script: |
+          echo "ndkVersion=27.0.12077973" >> $CM_BUILD_DIR/android/gradle.properties
+      - name: Get Flutter dependencies
+        script: flutter pub get
+      - name: Build APK
+        script: flutter build apk --release --target-platform android-arm
     artifacts:
       - build/app/outputs/flutter-apk/app-debug.apk
+      - build/app/outputs/flutter-apk/app-release.apk
+    publishing:
+      email:
+        recipients:
+          - ton.email@domaine.com
+        notify:
+          success: true
+          failure: true
