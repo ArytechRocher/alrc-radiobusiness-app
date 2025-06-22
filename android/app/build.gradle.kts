@@ -32,14 +32,7 @@ android {
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
-    signingConfigs {
-        release {
-            storeFile file("keystore/keystore.jks")
-            storePassword System.getenv("MY_KEYSTORE_PASSWORD")
-            keyAlias System.getenv("MY_KEY_ALIAS")
-            keyPassword System.getenv("MY_KEY_PASSWORD")
-        }
-    }
+    
 
     buildTypes {
         release {
