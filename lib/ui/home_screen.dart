@@ -34,7 +34,8 @@ class HomeScreen extends StatelessWidget {
             StreamBuilder<bool>(
               stream: playing,
               builder: (context, snapshot) {
-                final isPlaying = snapshot.data ?? false;
+                final isPlaying = snapshot.data?.playing ?? false;
+
                 return IconButton(
                   iconSize: 64,
                   color: Colors.deepPurple,
