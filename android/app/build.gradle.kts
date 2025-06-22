@@ -25,6 +25,9 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = flutter.minSdkVersion
+        ndk {
+            abiFilters += listOf("armeabi-v7a", "arm64-v8a") // uniquement ARM (pas de x86 pour l'émulateur)
+        }
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
