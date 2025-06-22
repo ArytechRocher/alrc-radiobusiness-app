@@ -1,5 +1,5 @@
 name: alrc_radio_business_app
-description: "A new Flutter project."
+description: "La Voix des Entrepreneurs..."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -38,7 +38,10 @@ dependencies:
   just_audio: ^0.10.4
   audio_service: ^0.18.12
   just_audio_background: ^0.0.1-beta.10
-
+  provider: ^6.0.5
+  audio_session: ^0.1.16
+  flutter_launcher_icons: ^0.14.4
+   
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -60,7 +63,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
- 
+assets:
+  - assets/audio/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -92,5 +96,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "assets/logo_radio.png"
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/logo_radio.png"
+
 
   
