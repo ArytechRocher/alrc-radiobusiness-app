@@ -9,10 +9,6 @@ workflows:
       ndk: 27.0.12077973
     scripts:
       - flutter pub get
-      - flutter build apk --debug
-      - name: Set NDK version
-        script: |
-          echo "ndkVersion=27.0.12077973" >> $CM_BUILD_DIR/android/gradle.properties
       - name: Get Flutter dependencies
         script: flutter pub get
       - name: Build APK
