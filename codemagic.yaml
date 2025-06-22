@@ -23,7 +23,7 @@ workflows:
     publishing:
       email:
         recipients:
-          - ton.email@domaine.com
+          - yetotodeabdelr@gmail.com
         notify:
           success: true
           failure: true
