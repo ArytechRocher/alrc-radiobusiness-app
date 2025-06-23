@@ -1,9 +1,14 @@
 import 'package:audio_service/audio_service.dart';
 import 'package:just_audio/just_audio.dart';
 import 'package:flutter/foundation.dart';
+import 'package:rxdart/rxdart.dart';
+
+
 
 class MyAudioHandler extends BaseAudioHandler with SeekHandler {
   final _player = AudioPlayer();
+  final mediaItemSubject = BehaviorSubject<MediaItem>();
+
 
   MyAudioHandler() {
     // Configuration d’un flux audio simple
@@ -17,6 +22,8 @@ class MyAudioHandler extends BaseAudioHandler with SeekHandler {
     ));
 
     // Metadonnées simulées
+    
+    
     final mediaItem = MediaItem(
       id: "https://groupemedia.info/uploads/audio/presentation1.mp3",
       album: "ALRC Radio",
