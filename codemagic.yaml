@@ -5,8 +5,8 @@ workflows:
     environment:
       flutter: stable
       vars:
-          JAVA_TOOL_OPTIONS: "-Xmx4096m"
-      ndk: 27.0.12077973
+        JAVA_TOOL_OPTIONS: "-Xmx4096m"
+      #ndk: 27.0.12077973
     scripts:
       - flutter pub get
       - name: Get Flutter dependencies
